@@ -3,18 +3,29 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import { Blog } from '../../../../payload-types'
 import Footer from '../../components/FooterSection'
-import { PageProps } from 'next/server'; // Keep PageProps import (if it works in your version)
+// import { PageProps } from 'next/server'; // Conditionally remove if import fails
 
-interface Props extends PageProps { // Keep extending PageProps if it resolves the "no export" issue
+// Simplified Props interface - if PageProps import is problematic
+interface Props {
     params: {
         slug: string;
     };
     searchParams: { [key: string]: string | string[] | undefined };
 }
 
+// If PageProps import works for you, you can try extending it again:
+/*
+interface Props extends PageProps {
+    params: {
+        slug: string;
+    };
+    searchParams: { [key: string]: string | string[] | undefined };
+}
+*/
+
+
 // Make generateMetadata async
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    // No need to await params directly here in most cases, but ensure function is async
     const response = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/blogs?where[slug][equals]=${params.slug}`)
     const data = await response.json()
 
@@ -32,7 +43,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 // Make BlogPost async
 export default async function BlogPost({ params }: Props) {
-    // No need to await params directly here in most cases, but ensure function is async
     const response = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/blogs?where[slug][equals]=${params.slug}&depth=2`)
     const data = await response.json()
 
