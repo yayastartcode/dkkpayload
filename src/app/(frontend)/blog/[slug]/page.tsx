@@ -4,10 +4,11 @@ import Image from 'next/image'
 import { Blog } from '../../../../payload-types'
 import Footer from '../../components/FooterSection'
 
-interface Props {
+type Props = {
   params: {
     slug: string
   }
+  searchParams: { [key: string]: string | string[] | undefined }
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
