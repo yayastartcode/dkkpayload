@@ -1,7 +1,5 @@
 "use client"
-import GLightbox from 'glightbox';
 import { useEffect, useState } from 'react';
-import 'glightbox/dist/css/glightbox.min.css';
 
 interface GalleryItem {
     id: string;
@@ -32,18 +30,24 @@ function GallerySection() {
     }, []);
 
     useEffect(() => {
-        // Initialize GLightbox after gallery items are loaded
+        // Initialize GLightbox after gallery items are loaded and only in browser
         if (typeof window !== 'undefined' && galleryItems.length > 0) {
-            const lightbox = GLightbox({
-                selector: '.glightbox',
-                touchNavigation: true,
-                loop: true,
-                autoplayVideos: true
+            // Dynamically import GLightbox only on the client side
+            import('glightbox').then((GLightbox) => {
+                // Instead of dynamically importing CSS, we'll rely on it being included in the main CSS bundle
+                // or loaded via a link tag in the document head
+                
+                const lightbox = GLightbox.default({
+                    selector: '.glightbox',
+                    touchNavigation: true,
+                    loop: true,
+                    autoplayVideos: true
+                });
+        
+                return () => {
+                    lightbox.destroy();
+                };
             });
-    
-            return () => {
-                lightbox.destroy();
-            };
         }
     }, [galleryItems]); 
 
