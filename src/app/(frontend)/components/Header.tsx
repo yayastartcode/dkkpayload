@@ -43,7 +43,7 @@ export const Header: React.FC = () => {
                 priority
               />
             ) : (
-              <span className="text-2xl font-bold text-yellow-400">PayDKK</span>
+              <span className="text-2xl font-bold text-yellow-400">Digdaya Auto Kreasi</span>
             )}
           </Link>
 

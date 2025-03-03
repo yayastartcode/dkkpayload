@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 interface GalleryItem {
     id: string;
@@ -65,9 +66,11 @@ function GallerySection() {
                             data-gallery="gallery1"
                             data-glightbox={`title: ${item.title}; description: ${item.description || ''}`}
                         >
-                            <img
+                            <Image
                                 src={item.image.url}
                                 alt={item.alt}
+                                width={500}
+                                height={300}
                                 className="w-full h-64 object-cover rounded-lg"
                             />
                             <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-75 transition-all duration-300 rounded-lg flex items-center justify-center">

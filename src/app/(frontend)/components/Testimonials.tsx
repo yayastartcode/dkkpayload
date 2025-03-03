@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 interface Testimonial {
   id: string;
@@ -52,9 +53,11 @@ function Testimonial() {
               <div className="flex items-center mb-4">
                 <div className="flex-shrink-0">
                   {testimonial.avatar ? (
-                    <img
+                    <Image
                       src={testimonial.avatar.url}
                       alt={testimonial.name}
+                      width={48}
+                      height={48}
                       className="w-12 h-12 rounded-full object-cover"
                     />
                   ) : (

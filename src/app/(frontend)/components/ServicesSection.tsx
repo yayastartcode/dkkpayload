@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-
+import Link from 'next/link';
 
 
 
@@ -46,10 +46,15 @@ function ServicesSection() {
                   <span>Material berkualitas dengan garansi terbaik</span>
                 </li>
               </ul>
-              <button className="mt-6 w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group">
+              <Link 
+                href="https://wa.me/02138746006?text=Halo,%20saya%20tertarik%20dengan%20layanan%20Karoseri%20Anda.%20Bisakah%20Anda%20memberikan%20informasi%20lebih%20lanjut?"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group"
+              >
                 <span>Pelajari Lebih Lanjut</span>
                 <i className="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -86,10 +91,15 @@ function ServicesSection() {
                   <span>Perawatan berkala terjadwal</span>
                 </li>
               </ul>
-              <button className="mt-6 w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group">
+              <Link 
+                href="https://wa.me/02138746006?text=Halo,%20saya%20tertarik%20dengan%20layanan%20Perawatan%20Mesin%20Anda.%20Bisakah%20Anda%20memberikan%20informasi%20lebih%20lanjut?"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group"
+              >
                 <span>Pelajari Lebih Lanjut</span>
                 <i className="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -126,10 +136,15 @@ function ServicesSection() {
                   <span>Pelurusan rangka presisi</span>
                 </li>
               </ul>
-              <button className="mt-6 w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group">
+              <Link 
+                href="https://wa.me/02138746006?text=Halo,%20saya%20tertarik%20dengan%20layanan%20Body%20Repair%20Anda.%20Bisakah%20Anda%20memberikan%20informasi%20lebih%20lanjut?"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group"
+              >
                 <span>Pelajari Lebih Lanjut</span>
                 <i className="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-              </button>
+              </Link>
             </div>
           </div>
         </div>

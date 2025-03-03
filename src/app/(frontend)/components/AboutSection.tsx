@@ -12,7 +12,13 @@ function AboutSection() {
           {/* Main About Content */}
           <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
             <div className="relative">
-              <img src="/api/media/file/612efd6a-bdf6-4419-acf5-f296b1467bd3.JPG" alt="Auto Repair Shop" className="rounded-lg shadow-2xl" />
+              <Image 
+                src="/api/media/file/612efd6a-bdf6-4419-acf5-f296b1467bd3.JPG" 
+                alt="Auto Repair Shop" 
+                width={600}
+                height={400}
+                className="rounded-lg shadow-2xl" 
+              />
               <div className="absolute -bottom-6 -right-6 bg-yellow-400 text-black p-6 rounded-lg shadow-xl hidden md:block">
                 <p className="text-2xl font-bold">3+</p>
                 <p className="text-sm font-semibold">Years Experience</p>
@@ -20,7 +26,7 @@ function AboutSection() {
             </div>
             <div>
               <h2 className="text-4xl font-bold text-yellow-400 mb-6">Tentang Kami</h2>
-              <p className="text-yellow-100 mb-6">PT Dalbo Kencana Kreasi, Berdiri tahun 2022, dan bergerak di bidang otomotif, dengan di dukung oleh sumber daya manusia yang berpengalaman di bidang otomotif. kami menjunjung tinggi kepuasan pelanggan melalui kualitas produk yang di hasilkan, harga yang kompetitif, pengerjaan sesuai estimasi waktu, kami berusaha untuk meningkatkan pelayanan dengan selalu berinovasi untuk terus menjadi lebih baik.</p>
+              <p className="text-yellow-100 mb-6">PT Digdaya Auto Kreasi, Berdiri tahun 2022, dan bergerak di bidang otomotif, dengan di dukung oleh sumber daya manusia yang berpengalaman di bidang otomotif. kami menjunjung tinggi kepuasan pelanggan melalui kualitas produk yang di hasilkan, harga yang kompetitif, pengerjaan sesuai estimasi waktu, kami berusaha untuk meningkatkan pelayanan dengan selalu berinovasi untuk terus menjadi lebih baik.</p>
               <div className="space-y-4 text-yellow-100">
                 <div className="flex items-start">
                   <i className="fas fa-check-circle text-yellow-400 mt-1 mr-3"></i>
@@ -28,7 +34,7 @@ function AboutSection() {
                 </div>
                 <div className="flex items-start">
                   <i className="fas fa-check-circle text-yellow-400 mt-1 mr-3"></i>
-                  <p>Tim mekanik bersertifikat dengan pengalaman luas</p>
+                  <p>Tim mekanik dengan pengalaman luas</p>
                 </div>
                 <div className="flex items-start">
                   <i className="fas fa-check-circle text-yellow-400 mt-1 mr-3"></i>
@@ -63,7 +69,7 @@ function AboutSection() {
                 <i className="fas fa-wrench text-2xl text-yellow-400"></i>
               </div>
               <h3 className="text-xl font-bold text-yellow-400 mb-2">Layanan Ahli</h3>
-              <p className="text-yellow-100">Teknisi bersertifikat kami membawa pengalaman dan keahlian bertahun-tahun untuk setiap perbaikan.</p>
+              <p className="text-yellow-100">Teknisi kami membawa pengalaman dan keahlian bertahun-tahun untuk setiap perbaikan.</p>
             </div>
             <div className="text-center p-6 bg-zinc-800 rounded-lg border border-yellow-400/20 hover:border-yellow-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl">
               <div className="w-16 h-16 bg-yellow-400/10 rounded-full flex items-center justify-center mx-auto mb-4 transform transition-all duration-300 group-hover:scale-110">
@@ -84,5 +90,5 @@ function AboutSection() {
       </section>
     );
   }
-  
-  export default AboutSection;
+
+export default AboutSection;

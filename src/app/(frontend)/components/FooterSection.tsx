@@ -1,6 +1,28 @@
+'use client';
+
 import Link from 'next/link';
+import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 function FooterSection() {
+    const [logo, setLogo] = useState<{ image: { url: string; alt: string } } | null>(null);
+
+    useEffect(() => {
+        const fetchLogo = async () => {
+            try {
+                const response = await fetch('/api/logos?where[isActive][equals]=true');
+                const data = await response.json();
+                if (data.docs && data.docs.length > 0) {
+                    setLogo(data.docs[0]);
+                }
+            } catch (error) {
+                console.error('Error fetching logo:', error);
+            }
+        };
+
+        fetchLogo();
+    }, []);
+
     return (
         <footer className="bg-zinc-900 text-yellow-100">
            
@@ -9,10 +31,21 @@ function FooterSection() {
                     {/* Company Info */}
                     <div>
                         <Link href="/" className="text-2xl font-bold flex items-center">
-                            <img src="https://www.dalbokencanakreasi.com/storage/logos/gwIO15JM5mTYmLPDHA3N9pm9X0f6NAFC7KB2uurV.png" alt="Dalbo Kencana Kreasi" className="h-16 w-auto" />
+                            {logo ? (
+                                <Image 
+                                    src={logo.image.url} 
+                                    alt={logo.image.alt} 
+                                    width={200}
+                                    height={64}
+                                    className="h-16 w-auto"
+                                    priority
+                                />
+                            ) : (
+                                <span className="text-2xl font-bold text-yellow-400">Digdaya Auto Kreasi</span>
+                            )}
                         </Link>
                         <p className="mb-6">
-                            PT Dalbo Kencana Kreasi, Berdiri tahun 2022, dan bergerak di bidang otomotif, dengan di dukung oleh sumber daya manusia yang berpengalaman di bidang otomotif.
+                            PT Digdaya Auto Kreasi, Berdiri tahun 2022, dan bergerak di bidang otomotif, dengan di dukung oleh sumber daya manusia yang berpengalaman di bidang otomotif.
                         </p>
                         <div className="flex space-x-4">
                             <a href="https://facebook.com/test" target="_blank" rel="noopener noreferrer" className="text-yellow-400 hover:text-yellow-300 transition-colors">
@@ -91,7 +124,7 @@ function FooterSection() {
 
                 {/* Copyright */}
                 <div className="border-t border-yellow-400/20 mt-12 pt-8 text-center">
-                    <p>© 2025 Dalbo Kencana Kreasi. All rights reserved.</p>
+                    <p>© 2025 Digdaya Auto Kreasi. All rights reserved.</p>
                 </div>
             </div>
         </footer>

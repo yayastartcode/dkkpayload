@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 // First install date-fns: npm install date-fns
 import { format } from 'date-fns';
+import Image from 'next/image';
 
 interface Blog {
   id: string;
@@ -80,9 +81,11 @@ function BlogSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogs.map((blog) => (
             <article key={blog.id} className="bg-black rounded-lg overflow-hidden hover:transform hover:scale-105 transition-transform duration-300">
-              <img 
+              <Image 
                 src={blog.featuredImage.url} 
                 alt={blog.featuredImage.alt} 
+                width={500}
+                height={300}
                 className="w-full h-48 object-cover" 
               />
 
