@@ -82,7 +82,7 @@ export const Header: React.FC = () => {
               </li>
               <li>
                 <Link
-                  href="/services"
+                  href="/#services"
                   className="block py-2 text-yellow-400 hover:text-yellow-300 transition-colors duration-300"
                 >
                   Services
@@ -90,7 +90,7 @@ export const Header: React.FC = () => {
               </li>
               <li>
                 <Link
-                  href="/blog"
+                  href="/#blog"
                   className="block py-2 text-yellow-400 hover:text-yellow-300 transition-colors duration-300"
                 >
                   Blog
@@ -98,7 +98,7 @@ export const Header: React.FC = () => {
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href="/#contact"
                   className="block py-2 text-yellow-400 hover:text-yellow-300 transition-colors duration-300"
                 >
                   Contact

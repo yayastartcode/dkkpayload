@@ -47,7 +47,7 @@ function ServicesSection() {
                 </li>
               </ul>
               <Link 
-                href="https://wa.me/02138746006?text=Halo,%20saya%20tertarik%20dengan%20layanan%20Karoseri%20Anda.%20Bisakah%20Anda%20memberikan%20informasi%20lebih%20lanjut?"
+                href="https://wa.me/6285228319696?text=Halo,%20saya%20tertarik%20dengan%20layanan%20Karoseri%20Anda.%20Bisakah%20Anda%20memberikan%20informasi%20lebih%20lanjut?"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group"
@@ -92,7 +92,7 @@ function ServicesSection() {
                 </li>
               </ul>
               <Link 
-                href="https://wa.me/02138746006?text=Halo,%20saya%20tertarik%20dengan%20layanan%20Perawatan%20Mesin%20Anda.%20Bisakah%20Anda%20memberikan%20informasi%20lebih%20lanjut?"
+                href="https://wa.me/6285228319696?text=Halo,%20saya%20tertarik%20dengan%20layanan%20Perawatan%20Mesin%20Anda.%20Bisakah%20Anda%20memberikan%20informasi%20lebih%20lanjut?"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group"
@@ -137,7 +137,7 @@ function ServicesSection() {
                 </li>
               </ul>
               <Link 
-                href="https://wa.me/02138746006?text=Halo,%20saya%20tertarik%20dengan%20layanan%20Body%20Repair%20Anda.%20Bisakah%20Anda%20memberikan%20informasi%20lebih%20lanjut?"
+                href="https://wa.me/6285228319696?text=Halo,%20saya%20tertarik%20dengan%20layanan%20Body%20Repair%20Anda.%20Bisakah%20Anda%20memberikan%20informasi%20lebih%20lanjut?"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group"

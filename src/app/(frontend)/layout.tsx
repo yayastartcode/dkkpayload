@@ -3,7 +3,7 @@ import './styles.css'
 import Header from './components/Header'
 
 export const metadata = {
-  title: 'Home - Dalbo Kencana Kreasi',
+  title: 'Digdaya Auto Kreasi Body Repair, Karoseri & Engine Maintenance - Home',
   description: 'Karoseri Body Repair dan Engine Maintenance.',
 }
 
