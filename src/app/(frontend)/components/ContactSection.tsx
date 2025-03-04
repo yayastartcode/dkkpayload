@@ -1,5 +1,25 @@
+'use client';
+
+import { FormEvent, useState } from 'react';
 
 function ContactSection() {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
+    const handleSubmit = (e: FormEvent) => {
+        e.preventDefault();
+        
+        // Format the WhatsApp message
+        const whatsappMessage = `Halo saya ${name}\n\n${message}`;
+        
+        // Create the WhatsApp URL
+        const whatsappUrl = `https://wa.me/6285228319696?text=${encodeURIComponent(whatsappMessage)}`;
+        
+        // Open WhatsApp in a new tab
+        window.open(whatsappUrl, '_blank');
+    };
+
     return (
         <section id="contact" className="bg-black py-20">
           
@@ -9,31 +29,37 @@ function ContactSection() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     {/* Contact Form */}
                     <div className="bg-zinc-900 p-8 rounded-lg">
-                        <form action="https://www.dalbokencanakreasi.com/contact" method="POST" className="space-y-6">
-                            <input type="hidden" name="_token" value="3Dq3XrXAIqva9lEP2fmOlFqRDHHTqkdx4jxriG3Q" autoComplete="off" />
+                        <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
                                 <label className="block text-yellow-100 mb-2">Name</label>
-                                <input type="text" name="name" required className="w-full px-4 py-2 rounded bg-black text-yellow-100 border border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+                                <input 
+                                    type="text" 
+                                    required 
+                                    className="w-full px-4 py-2 rounded bg-black text-yellow-100 border border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400" 
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                />
                             </div>
 
                             <div>
                                 <label className="block text-yellow-100 mb-2">Email</label>
-                                <input type="email" name="email" required className="w-full px-4 py-2 rounded bg-black text-yellow-100 border border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+                                <input 
+                                    type="email" 
+                                    required 
+                                    className="w-full px-4 py-2 rounded bg-black text-yellow-100 border border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400" 
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                />
                             </div>
-
-                            <div>
-                                <label className="block text-yellow-100 mb-2">Phone</label>
-                                <input type="tel" name="phone" required className="w-full px-4 py-2 rounded bg-black text-yellow-100 border border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
-                            </div>
-
-                            <div>
-                                <label className="block text-yellow-100 mb-2">Subject</label>
-                                <input type="text" name="subject" required className="w-full px-4 py-2 rounded bg-black text-yellow-100 border border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
-                            </div>
-
                             <div>
                                 <label className="block text-yellow-100 mb-2">Message</label>
-                                <textarea name="message" rows={4} required className="w-full px-4 py-2 rounded bg-black text-yellow-100 border border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
+                                <textarea 
+                                    rows={4} 
+                                    required 
+                                    className="w-full px-4 py-2 rounded bg-black text-yellow-100 border border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                                    value={message}
+                                    onChange={(e) => setMessage(e.target.value)}
+                                ></textarea>
                             </div>
 
                             <button type="submit" className="w-full bg-yellow-400 text-black py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
@@ -69,7 +95,7 @@ function ContactSection() {
                             </div>
                             <div>
                                 <h3 className="text-yellow-400 font-semibold mb-2">Whatsapp Number</h3>
-                                <p className="text-yellow-100">02138746006</p>
+                                <p className="text-yellow-100">085228319696</p>
                             </div>
                         </div>
 
@@ -79,7 +105,7 @@ function ContactSection() {
                             </div>
                             <div>
                                 <h3 className="text-yellow-400 font-semibold mb-2">Email Address</h3>
-                                <p className="text-yellow-100">info@dalbokencanakreasi.com</p>
+                                <p className="text-yellow-100">info@digdayaautokreasi.com</p>
                             </div>
                         </div>
 

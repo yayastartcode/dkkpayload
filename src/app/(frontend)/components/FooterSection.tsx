@@ -88,7 +88,7 @@ function FooterSection() {
                         <ul className="space-y-4">
                             <li className="flex items-center space-x-3">
                                 <i className="fas fa-phone text-yellow-400"></i>
-                                <span>02138746006</span>
+                               <Link href="tel:02138746006"> <span>02138746006</span></Link>
                             </li>
                             <li className="flex items-center space-x-3">
                                 <i className="fas fa-envelope text-yellow-400"></i>
