@@ -92,9 +92,9 @@ function FooterSection() {
                             </li>
                             <li className="flex items-center space-x-3">
                                 <i className="fas fa-envelope text-yellow-400"></i>
-                                <a href="mailto:info@dalbokencanakreasi.com" className="hover:text-yellow-400 transition-colors">
-                                    info@dalbokencanakreasi.com
-                                </a>
+                                <Link href="mailto:info@dalbokencanakreasi.com" className="hover:text-yellow-400 transition-colors">
+                                    info@digdayaautokreasi.com
+                                </Link>
                             </li>
                             <li className="flex space-x-3">
                                 <i className="fas fa-map-marker-alt text-yellow-400 mt-1"></i>

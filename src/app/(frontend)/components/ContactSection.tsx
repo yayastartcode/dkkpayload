@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { FormEvent, useState } from 'react';
 
 function ContactSection() {
@@ -95,7 +96,9 @@ function ContactSection() {
                             </div>
                             <div>
                                 <h3 className="text-yellow-400 font-semibold mb-2">Whatsapp Number</h3>
-                                <p className="text-yellow-100">085228319696</p>
+                                <Link href="https://wa.me/6285228319696" className="hover:text-yellow-400 transition-colors">
+                                085228319696
+                                </Link>
                             </div>
                         </div>
 
@@ -105,7 +108,9 @@ function ContactSection() {
                             </div>
                             <div>
                                 <h3 className="text-yellow-400 font-semibold mb-2">Email Address</h3>
-                                <p className="text-yellow-100">info@digdayaautokreasi.com</p>
+                                <Link href="mailto:info@dalbokencanakreasi.com" className="hover:text-yellow-400 transition-colors">
+                                    info@digdayaautokreasi.com
+                                </Link>
                             </div>
                         </div>
 
