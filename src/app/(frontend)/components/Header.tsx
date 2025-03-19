@@ -104,15 +104,7 @@ export const Header: React.FC = () => {
                   Contact
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/api/media/file/BROSUR%20FORTIS%201124.pdf"
-                  rel="noopener noreferrer" target="_blank"
-                  className="block py-2 text-yellow-400 hover:text-yellow-300 transition-colors duration-300"
-                >
-                  Brosur
-                </Link>
-              </li>
+
             </ul>
           </nav>
         </div>
