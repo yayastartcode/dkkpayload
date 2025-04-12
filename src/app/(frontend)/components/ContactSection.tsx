@@ -94,7 +94,7 @@ function ContactSection() {
                 <h3 className="text-yellow-400 font-semibold mb-2">Phone Number</h3>
                 <Link
                   href="tel:02138746006"
-                  className="text-yellow-500 hover:text-yellow-400 transition-colors"
+                  className="text-yellow-100 hover:text-yellow-400 transition-colors"
                 >
                   02138746006
                 </Link>
@@ -108,7 +108,7 @@ function ContactSection() {
                 <h3 className="text-yellow-400 font-semibold mb-2">Whatsapp Number</h3>
                 <Link
                   href="https://wa.me/6285228319696"
-                  className="text-yellow-500 hover:text-yellow-400 transition-colors"
+                  className="text-yellow-100 hover:text-yellow-400 transition-colors"
                 >
                   085228319696
                 </Link>
@@ -122,8 +122,8 @@ function ContactSection() {
               <div>
                 <h3 className="text-yellow-400 font-semibold mb-2">Email Address</h3>
                 <Link
-                  href="mailto:info@dalbokencanakreasi.com"
-                  className="text-yellow-500 hover:text-yellow-400 transition-colors"
+                  href="mailto:dak.digdaya@gmail.com"
+                  className="text-yellow-100 hover:text-yellow-400 transition-colors"
                 >
                   dak.digdaya@gmail.com
                 </Link>
